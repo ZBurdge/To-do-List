@@ -18,12 +18,12 @@ function addTask() {
 
 todoList.addEventListener(
   "click",
-  function (e) {
-    if (e.target.tagName === "LI") {
-      e.target.classList.toggle("checked");
+  function (event) {
+    if (event.target.tagName === "LI") {
+      event.target.classList.toggle("checked");
       saveData();
-    } else if (e.target.tagName === "SPAN") {
-      e.target.parentElement.remove();
+    } else if (event.target.tagName === "SPAN") {
+      event.target.parentElement.remove();
       saveData();
     }
   },
@@ -39,3 +39,10 @@ function showTask() {
 
   showTask();
 }
+
+inputBox.addEventListener("keypress", function (event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    addTask();
+  }
+});
