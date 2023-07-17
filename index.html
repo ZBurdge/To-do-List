@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/47434f969d.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>To-Do List</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="todo-app">
+        <h2>
+          To-Do List
+          <i class="fa-solid fa-list-check" style="color: #ffb6c1"></i>
+        </h2>
+        <div class="row todo-input">
+          <input type="text" placeholder="Enter your task" id="input-box" />
+          <button onclick="addTask()">Add</button>
+        </div>
+        <ul id="todo-list">
+          <!-- <li class="checked">Task 1</li>
+          <li>Task 2</li>
+          <li>Task 3</li> -->
+        </ul>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
