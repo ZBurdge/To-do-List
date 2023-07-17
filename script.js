@@ -13,7 +13,7 @@ function addTask() {
     li.appendChild(span);
   }
   inputBox.value = "";
-  saveDate();
+  saveData();
 }
 
 todoList.addEventListener(
@@ -21,16 +21,16 @@ todoList.addEventListener(
   function (e) {
     if (e.target.tagName === "LI") {
       e.target.classList.toggle("checked");
-      saveDate();
+      saveData();
     } else if (e.target.tagName === "SPAN") {
       e.target.parentElement.remove();
-      saveDate();
+      saveData();
     }
   },
   false
 );
 
-function saveDate() {
+function saveData() {
   localStorage.setItem("data", todoList.innerHTML);
 }
 
