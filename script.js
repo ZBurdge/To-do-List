@@ -36,9 +36,9 @@ function saveData() {
 
 function showTask() {
   todoList.innerHTML = localStorage.getItem("data");
-
-  showTask();
 }
+
+showTask();
 
 inputBox.addEventListener("keypress", function (event) {
   if (event.key === "Enter") {
