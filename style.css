@@ -116,3 +116,11 @@ ul li span {
 ul li span:hover {
   background: #ffb6c1;
 }
+
+footer {
+  text-align: center;
+}
+
+a {
+  color: white;
+}
